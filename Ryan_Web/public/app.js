@@ -1,12 +1,16 @@
  var myapp = angular.module('myapp', ['ngRoute']);
 
- // configure our routes
- myapp.config(function() {
+ myapp.config(function($routeProvider) {
+$routeProvider
+// home page
+.when('/', {
+templateUrl: 'pages/landing.html',
+controller: 'mainController'
+})
 
-     // home page
-     .when('/', {
-         templateUrl: 'pages/index.html',
-         controller: 'mainController'
-     })
-
- });
+//signup page
+.when('/blog', {
+templateUrl: 'pages/blog.html',
+controller: 'blogController'
+});
+});
