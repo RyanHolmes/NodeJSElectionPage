@@ -6,3 +6,8 @@ body {
 a {
   color: #00B7FF;
 }
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
